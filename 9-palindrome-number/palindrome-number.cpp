@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isPalindrome(long long int x) {
+    bool isPalindrome(int x) {
         if (x<0)
             return false;
         int a,b,f=0;
