@@ -3,7 +3,7 @@ public:
     bool isPalindrome(int x) {
         if (x<0)
             return false;
-        int a,b,f=0;
+        int a,b;
         long long int n=1;
         while (x/(n*10)>0)
             n*=10;
@@ -13,11 +13,9 @@ public:
             x=x-(a*n);
             x/=10;
             n/=100;
-            if (a!=b){
-                f=1;
-                break;}}
-        if (f==0)
-            return true;
-        else
-            return false;}
+            if (a!=b)
+                return false;
+        }
+        return true;
+    }
 };
