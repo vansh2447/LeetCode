@@ -10,11 +10,10 @@ public:
         while (x>0){
             a=x/n;
             b=x%10;
-            x=x-(a*n);
-            x/=10;
-            n/=100;
             if (a!=b)
                 return false;
+            x=(x%n)/10;
+            n/=100;
         }
         return true;
     }
